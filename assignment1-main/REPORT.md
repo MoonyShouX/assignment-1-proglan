@@ -1,12 +1,12 @@
 # Laporan Programming Assignment 1: Basic C++
 
-# 📘 REPORT.md
+# REPORT.md
 
 ## Program Perhitungan Umur dan Hari (C++)
 
 ---
 
-## 📌 Deskripsi
+## Deskripsi
 
 Program ini dibuat menggunakan bahasa **C++** untuk menghitung:
 
@@ -22,7 +22,7 @@ DD/MM/YYYY
 
 ---
 
-## ⚙️ Cara Kerja Program
+## Cara Kerja Program
 
 Program memanfaatkan library:
 
@@ -32,7 +32,7 @@ Program memanfaatkan library:
 
 ---
 
-## 🧠 Penjelasan Fungsi
+## Penjelasan Fungsi
 
 ### 1. `yearsOld`
 
@@ -69,7 +69,7 @@ Menentukan hari dari tanggal lahir.
 
 ---
 
-## 💻 Implementasi Kode
+## Implementasi Kode
 
 ```cpp
 int yearsOld(tm* inputTgl, tm* currentTgl)
@@ -113,23 +113,23 @@ string dayOfDate(tm* inputTgl)
 
 ---
 
-## 🧪 Contoh Input & Output
+## Contoh 
 
-### ▶️ Input
-
-```
-15/03/1993
-```
-
-### ▶️ Output
+### Input
 
 ```
-32 384 Sabtu
+22/08/2006
+```
+
+### Output
+
+```
+19 235 Selasa
 ```
 
 ---
 
-## ⚠️ Catatan Penting
+## Catatan Penting
 
 * `tm_year` dihitung dari tahun 1900
 * `tm_mon` dimulai dari 0 (Januari = 0)
@@ -137,7 +137,7 @@ string dayOfDate(tm* inputTgl)
 
 ---
 
-## 🏁 Kesimpulan
+## Kesimpulan
 
 Program ini berhasil:
 
