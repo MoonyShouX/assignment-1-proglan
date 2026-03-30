@@ -73,19 +73,45 @@ int main(int argc, char ** argv)
 //*********************************************************************************************************************
 int yearsOld(tm* inputTgl, tm* currentTgl)
 {
-    return 0;
+    int year = currentTgl->tm_year - inputTgl->tm_year;
+
+    // cek apakah ulang tahun sudah lewat atau belum
+    if (currentTgl->tm_mon < inputTgl->tm_mon ||
+       (currentTgl->tm_mon == inputTgl->tm_mon && currentTgl->tm_mday < inputTgl->tm_mday))
+    {
+        year--;
+    }
+
+    return year;
 }
 //*********************************************************************************************************************
 //*********************************************************************************************************************
 int monthsOld(tm* inputTgl, tm* currentTgl)
 {
-    return 0;
+    int months = (currentTgl->tm_year - inputTgl->tm_year) * 12;
+    months += (currentTgl->tm_mon - inputTgl->tm_mon);
+
+    // cek tanggal
+    if (currentTgl->tm_mday < inputTgl->tm_mday)
+    {
+        months--;
+    }
+
+    return months;
 }
 //*********************************************************************************************************************
 //*********************************************************************************************************************
 string dayOfDate(tm* inputTgl)
 {
-    return "RET";
+    // normalisasi struktur tm
+    mktime(inputTgl);
+
+    string days[] = {
+        "Minggu", "Senin", "Selasa", "Rabu",
+        "Kamis", "Jumat", "Sabtu"
+    };
+
+    return days[inputTgl->tm_wday];
 }
 //*********************************************************************************************************************
 //*********************************************************************************************************************
